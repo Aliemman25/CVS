@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ملخص عملي التشريح للطباعة</title>
+    <style>
+        /* A Google Font for better Arabic rendering */
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        :root {
+            --border-color: #cccccc;
+            --header-color: #003366;
+            --body-text-color: #333333;
+            --bg-color: #f4f4f9;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--body-text-color);
+            line-height: 1.8;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-title {
+            text-align: center;
+            color: var(--header-color);
+            border-bottom: 3px solid var(--header-color);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            background-color: #fdfdfd;
+        }
+
+        .card-header {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--header-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #d9534f; /* A contrasting color for Answer title */
+            border-bottom: 2px solid #f0ad4e;
+            padding-bottom: 5px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        img {
+            max-width: 90%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+        .answer-content h3 {
+            font-size: 1.1em;
+            color: var(--header-color);
+            margin-top: 0;
+        }
+        
+        .answer-content ul {
+            list-style-type: none;
+            padding-right: 0;
+        }
+
+        .answer-content li {
+            margin-bottom: 8px;
+        }
+
+        .list-number {
+            font-weight: bold;
+            color: var(--header-color);
+            margin-left: 8px;
+        }
+        
+        /* This is the class for tables/multi-column lists */
+        .two-column-list {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            column-gap: 40px;
+            padding-right: 20px;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 25px 0;
+        }
+
+        /* Print-specific styles */
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+                margin: 0;
+                font-size: 12pt; /* Standard print size */
+            }
+
+            .page-container {
+                box-shadow: none;
+                border-radius: 0;
+                border: none;
+                padding: 1.5cm;
+                margin: 0;
+                max-width: 100%;
+            }
+
+            .card {
+                border: 1px solid #999;
+                page-break-inside: avoid; /* Prevents a card from splitting across two pages */
+                box-shadow: none;
+            }
+
+            img {
+                max-width: 80%; /* Reduce image size slightly for printing */
+            }
+            
+            .main-title {
+                border-bottom: 2px solid black;
+            }
+
+            :root, h1, h2, h3, h4, p, li {
+                color: black !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-container">
+        <h1 class="main-title">ملخص عملي التشريح (Anatomy Practical)</h1>
+
+        <!-- Card 1 -->
+        <div class="card">
+            <h2 class="card-header">Q1: Identify the diagram and name the pointed structures.</h2>
+            <div class="image-container"><img src="A 1.jpg" alt="Question Image 1"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 1.jpg" alt="Answer Image 1"></div>
+                <h3>Diagram: Urinary system in the Abdominal Cavity</h3>
+                <ul>
+                    <li><span class="list-number">1.</span> Inferior vena cava</li>
+                    <li><span class="list-number">2.</span> Left Kidney</li>
+                    <li><span class="list-number">3.</span> Abdominal aorta</li>
+                    <li><span class="list-number">4.</span> Left ureter</li>
+                    <li><span class="list-number">5.</span> Urinary bladder</li>
+                    <li><span class="list-number">6.</span> Urethra</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <h2 class="card-header">Q2: Identify the diagram and name the pointed structures.</h2>
+            <div class="image-container"><img src="A 2.jpg" alt="Question Image 2"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 2.jpg" alt="Answer Image 2"></div>
+                <h3>Diagram: Urinary system</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> Right Kidney</li>
+                    <li><span class="list-number">2.</span> Cortex (inside view)</li>
+                    <li><span class="list-number">3.</span> Medullary pyramids</li>
+                    <li><span class="list-number">4.</span> Medullary papilla / Minor calyx</li>
+                    <li><span class="list-number">5.</span> Renal pelvis</li>
+                    <li><span class="list-number">6.</span> Right Ureter</li>
+                    <li><span class="list-number">7.</span> Urinary bladder</li>
+                    <li><span class="list-number">8.</span> Opening of Right ureter in the trigone</li>
+                    <li><span class="list-number">9.</span> Internal sphincter</li>
+                    <li><span class="list-number">10.</span> External sphincter</li>
+                    <li><span class="list-number">11.</span> Urethra</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <h2 class="card-header">Q3: Identify the diagram and name the pointed structures.</h2>
+            <div class="image-container"><img src="A 3.jpg" alt="Question Image 3"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 3.jpg" alt="Answer Image 3"></div>
+                <h3>Diagram: Right Kidney and suprarenal gland</h3>
+                <ul>
+                    <li><span class="list-number">1.</span> Right Kidney</li>
+                    <li><span class="list-number">2.</span> Right suprarenal gland</li>
+                    <li><span class="list-number">3.</span> Renal artery</li>
+                    <li><span class="list-number">4.</span> Renal vein</li>
+                    <li><span class="list-number">5.</span> Right ureter</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="card">
+            <h2 class="card-header">Q4: Identify the diagram and name the pointed structures.</h2>
+            <div class="image-container"><img src="A 4.jpg" alt="Question Image 4"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 4.jpg" alt="Answer Image 4"></div>
+                <h3>Diagram: Internal structure of Right Kidney</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> Capsule of the Kidney</li>
+                    <li><span class="list-number">2.</span> Renal cortex</li>
+                    <li><span class="list-number">3.</span> Pyramids in renal medulla</li>
+                    <li><span class="list-number">4.</span> Renal artery</li>
+                    <li><span class="list-number">5.</span> Renal vein</li>
+                    <li><span class="list-number">6.</span> Minor calyx</li>
+                    <li><span class="list-number">7.</span> Major Calyx</li>
+                    <li><span class="list-number">8.</span> Renal pelvis</li>
+                    <li><span class="list-number">9.</span> Right ureter</li>
+                    <li><span class="list-number">10.</span> Renal papilla</li>
+                    <li><span class="list-number">11.</span> Renal sinus</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="card">
+            <h2 class="card-header">Q5: Identify the diagram and name the pointed structures.</h2>
+            <div class="image-container"><img src="A 5.jpg" alt="Question Image 5"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Diagram: Left Kidney and Left suprarenal gland</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> Left Kidney</li>
+                    <li><span class="list-number">2.</span> Left suprarenal gland</li>
+                    <li><span class="list-number">3.</span> Hilum of Left Kidney</li>
+                    <li><span class="list-number">4.</span> Left suprarenal vein</li>
+                    <li><span class="list-number">5.</span> Left renal vein</li>
+                    <li><span class="list-number">6.</span> Anterior and posterior branches of renal artery</li>
+                    <li><span class="list-number">7.</span> Left testicular / ovarian vein</li>
+                    <li><span class="list-number">8.</span> Left ureter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="card">
+            <h2 class="card-header">Q6: Identify the diagram and name the pointed structures.</h2>
+            <div class="image-container"><img src="A 6.jpg" alt="Question Image 6"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 6.jpg" alt="Answer Image 6"></div>
+                <h3>Diagram: Kidneys and related structures of Abdominal cavity</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> Suprarenal gland</li>
+                    <li><span class="list-number">2.</span> Right Kidney</li>
+                    <li><span class="list-number">3.</span> Left Kidney</li>
+                    <li><span class="list-number">4.</span> Left renal vein</li>
+                    <li><span class="list-number">5.</span> Ureters</li>
+                    <li><span class="list-number">6.</span> Abdominal aorta</li>
+                    <li><span class="list-number">7.</span> Inferior vena cava</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="card">
+            <h2 class="card-header">Q7: Identify the diagram and name the pointed structures.</h2>
+            <div class="image-container"><img src="A 7.jpg" alt="Question Image 7"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 7.jpg" alt="Answer Image 7"></div>
+                <h3>Diagram: Urinary system and the blood supply of the Kidney</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> Capsule of right Kidney</li>
+                    <li><span class="list-number">2.</span> Renal cortex</li>
+                    <li><span class="list-number">3.</span> Pyramid in renal medulla</li>
+                    <li><span class="list-number">4.</span> Pelvis of Kidney</li>
+                    <li><span class="list-number">5.</span> Ureter</li>
+                    <li><span class="list-number">6.</span> Urinary bladder</li>
+                    <li><span class="list-number">7.</span> Urethra</li>
+                    <li><span class="list-number">8.</span> Renal arteries</li>
+                    <li><span class="list-number">9.</span> Renal veins</li>
+                    <li><span class="list-number">10.</span> Inferior vena cava</li>
+                    <li><span class="list-number">11.</span> Abdominal aorta</li>
+                    <li><span class="list-number">12.</span> Left common iliac vein</li>
+                    <li><span class="list-number">13.</span> Right common iliac artery</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="card">
+            <h2 class="card-header">Q8: Mention two Anterior relation for the structure A</h2>
+            <div class="image-container"><img src="A 8.jpg" alt="Question Image 8"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <ul>
+                    <li>Right lobe of liver</li>
+                    <li>Right suprarenal gland</li>
+                    <li>Jejunum</li>
+                    <li>Right colic flexure</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 9 -->
+        <div class="card">
+            <h2 class="card-header">Q9: Mention two Anterior relation for the structure B</h2>
+            <div class="image-container"><img src="A 8.jpg" alt="Question Image 8"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <ul>
+                    <li>Left suprarenal gland</li>
+                    <li>Pancreas</li>
+                    <li>Spleen</li>
+                    <li>Left colic flexure</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 10 -->
+        <div class="card">
+            <h2 class="card-header">Q10: Mention two posterior relation for the structure A</h2>
+            <div class="image-container"><img src="A 8.jpg" alt="Question Image 8"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <ul>
+                    <li>Diaphragm</li>
+                    <li>Right psoas major</li>
+                    <li>12th rib</li>
+                    <li>Right subcostal nerve</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 11 -->
+        <div class="card">
+            <h2 class="card-header">Q11: Mention the lymphatics of the structure B</h2>
+            <div class="image-container"><img src="A 8.jpg" alt="Question Image 8"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Para-aortic lymp nodes</h3>
+            </div>
+        </div>
+
+        <!-- Card 12 -->
+        <div class="card">
+            <h2 class="card-header">Q12: Identify the pointed structure A and Mention its nerve supply</h2>
+            <div class="image-container"><img src="A 8.jpg" alt="Question Image 8"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Right Kidney</h3>
+                <ul>
+                    <li><b>Sympathetic:</b> Renal plexus</li>
+                    <li><b>Parasympathetic:</b> Vagus nerve</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 13 -->
+        <div class="card">
+            <h2 class="card-header">Q13: Identify the diagram and name the pointed structures</h2>
+            <div class="image-container"><img src="A 9.jpg" alt="Question Image 9"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 9.jpg" alt="Answer Image 9"></div>
+                <h3>Diagram: supreior veiw of male and female Abdominal cavity</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> Urinary bladder</li>
+                    <li><span class="list-number">2.</span> ureter</li>
+                    <li><span class="list-number">3.</span> ureter</li>
+                    <li><span class="list-number">4.</span> uterus</li>
+                    <li><span class="list-number">5.</span> sigmoid colon</li>
+                    <li><span class="list-number">6.</span> common iliac artery</li>
+                    <li><span class="list-number">7.</span> internal iliac artery</li>
+                    <li><span class="list-number">8.</span> utrine artery</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 14 -->
+        <div class="card">
+            <h2 class="card-header">Q14: Identify number 1 and mention its arterial supply</h2>
+            <div class="image-container"><img src="A 9.jpg" alt="Question Image 9"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 9.jpg" alt="Answer Image 9"></div>
+                <h3>Urinary bladder</h3>
+                <p><b>Arterial Supply:</b> supreior and Inferior vasivle artery - from obteuratur and Inferior gluteual artery</p>
+            </div>
+        </div>
+
+        <!-- Card 15 -->
+        <div class="card">
+            <h2 class="card-header">Q15: Identify number 1 and mention two posterior relation</h2>
+            <div class="image-container"><img src="A 9.jpg" alt="Question Image 9"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 9.jpg" alt="Answer Image 9"></div>
+                <h3>Urinary bladder</h3>
+                <p><b>Posterior relation:</b> Vas difrence - seminal vescile - rectum</p>
+            </div>
+        </div>
+
+        <!-- Card 16 -->
+        <div class="card">
+            <h2 class="card-header">Q16: Identify number 2 and mention two arterial relation</h2>
+            <div class="image-container"><img src="A 9.jpg" alt="Question Image 9"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 9.jpg" alt="Answer Image 9"></div>
+                <h3>Right ureter</h3>
+                <p><b>Arterial relation:</b> Biforcation of common iliac artery - External iliac artery - obteuratur artery</p>
+            </div>
+        </div>
+
+        <!-- Card 17 -->
+        <div class="card">
+            <h2 class="card-header">Q17: Identify number 2 and mention its length</h2>
+            <div class="image-container"><img src="A 9.jpg" alt="Question Image 9"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 9.jpg" alt="Answer Image 9"></div>
+                <h3>Right ureter</h3>
+                <p><b>Length:</b> 30Cm</p>
+            </div>
+        </div>
+
+        <!-- Card 18 -->
+        <div class="card">
+            <h2 class="card-header">Q18: Identify number 1 and mention its lymphatics</h2>
+            <div class="image-container"><img src="A 9.jpg" alt="Question Image 9"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 9.jpg" alt="Answer Image 9"></div>
+                <h3>Urinary bladder</h3>
+                <p><b>Lymphatics:</b> External iliac lymp nodes</p>
+            </div>
+        </div>
+        
+        <!-- Card 19 -->
+        <div class="card">
+            <h2 class="card-header">Q19: Identify the diagram and name the pointed structures</h2>
+            <div class="image-container"><img src="A 10.jpg" alt="Question Image 10"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 10.jpg" alt="Answer Image 10"></div>
+                <h3>Diagram :male Urinary tract and its relation structures</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> penile Urethra</li>
+                    <li><span class="list-number">2.</span> membranous urthera</li>
+                    <li><span class="list-number">3.</span> prostatic urthera</li>
+                    <li><span class="list-number">4.</span> prostata</li>
+                    <li><span class="list-number">5.</span> Ejaculatur duct</li>
+                    <li><span class="list-number">6.</span> rectum</li>
+                    <li><span class="list-number">7.</span> seminal vesicle</li>
+                    <li><span class="list-number">8.</span> vasdeference</li>
+                    <li><span class="list-number">9.</span> Urinary bladder</li>
+                    <li><span class="list-number">10.</span> ureter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 20 -->
+        <div class="card">
+            <h2 class="card-header">Q20: Identify the diagram and name the pointed structures</h2>
+            <div class="image-container"><img src="A 11.jpg" alt="Question Image 11"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 11.jpg" alt="Answer Image 11"></div>
+                <h3>Diagram : female Urinary tract and its relation structures</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> urthera</li>
+                    <li><span class="list-number">2.</span> Urinary bladder</li>
+                    <li><span class="list-number">3.</span> ureter</li>
+                    <li><span class="list-number">4.</span> vagina</li>
+                    <li><span class="list-number">5.</span> vesicoutrine pouch</li>
+                    <li><span class="list-number">6.</span> rectoutrine pouch</li>
+                    <li><span class="list-number">7.</span> uterus</li>
+                    <li><span class="list-number">8.</span> ovary</li>
+                    <li><span class="list-number">9.</span> fallopian tube</li>
+                    <li><span class="list-number">10.</span> rectum</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 21 -->
+        <div class="card">
+            <h2 class="card-header">Q21: Identify the diagram and name the pointed structures</h2>
+            <div class="image-container"><img src="A 12.jpg" alt="Question Image 12"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Diagram : parts of male urthera and Urinary bladder</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> Urinary bladder</li>
+                    <li><span class="list-number">2.</span> opening of ureter</li>
+                    <li><span class="list-number">3.</span> trigone</li>
+                    <li><span class="list-number">4.</span> prostata gland</li>
+                    <li><span class="list-number">5.</span> cowper'a gland</li>
+                    <li><span class="list-number">6.</span> corpus spongiosum</li>
+                    <li><span class="list-number">7.</span> navicular fossa</li>
+                    <li><span class="list-number">8.</span> External urtheral orifice</li>
+                    <li><span class="list-number">9.</span> glans peins</li>
+                    <li><span class="list-number">10.</span> corpus cavernusum</li>
+                    <li><span class="list-number">11.</span> penile Urethra</li>
+                    <li><span class="list-number">12.</span> membranous urthera</li>
+                    <li><span class="list-number">13.</span> prostate urthera</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 22 -->
+        <div class="card">
+            <h2 class="card-header">Q22: Identify the diagram and name the pointed structures</h2>
+            <div class="image-container"><img src="A 13.jpg" alt="Question Image 13"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <div class="image-container"><img src="Aa 13.jpg" alt="Answer Image 13"></div>
+                <h3>Diagram : prostatic and membranous urthera</h3>
+                <ul class="two-column-list">
+                    <li><span class="list-number">1.</span> prostate gland</li>
+                    <li><span class="list-number">2.</span> prostatic urthera</li>
+                    <li><span class="list-number">3.</span> internal urtheral sphenciter</li>
+                    <li><span class="list-number">4.</span> External urtheral sphenciter</li>
+                    <li><span class="list-number">5.</span> seminal caliculus</li>
+                    <li><span class="list-number">6.</span> prostatic uticle</li>
+                    <li><span class="list-number">7.</span> opening of ejaculation duct</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 23 -->
+        <div class="card">
+            <h2 class="card-header">Q23: Identify the renal anomalies and mention its causes?</h2>
+            <div class="image-container"><img src="A 14.jpg" alt="Question Image 14"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Horseshoe kidney</h3>
+                <p>The kidneys fuse into a single structure underneath IMA</p>
+            </div>
+        </div>
+        
+        <!-- Card 24 -->
+        <div class="card">
+            <h2 class="card-header">Q24: Identify the congenital anomalies?</h2>
+            <div class="image-container"><img src="A 15.jpg" alt="Question Image 15"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Anomalies:</h3>
+                <ul>
+                    <li>Pelvic kidney</li>
+                    <li>Double ureter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Card 25 -->
+        <div class="card">
+            <h2 class="card-header">Q25: Identify the congenital anomalies?</h2>
+            <div class="image-container"><img src="A 16.jpg" alt="Question Image 16"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Polycystic Kidney</h3>
+            </div>
+        </div>
+
+        <!-- Card 26 -->
+        <div class="card">
+            <h2 class="card-header">Q26: Identify the congenital anomalies?</h2>
+            <div class="image-container"><img src="A 18.jpg" alt="Question Image 18"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Urachal Sinus</h3>
+            </div>
+        </div>
+
+        <!-- Card 27 -->
+        <div class="card">
+            <h2 class="card-header">Q27: Identify the congenital anomalies?</h2>
+            <div class="image-container"><img src="A 20.jpg" alt="Question Image 20"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Urachal Cyst</h3>
+            </div>
+        </div>
+
+        <!-- Card 28 -->
+        <div class="card">
+            <h2 class="card-header">Q28: Identify the congenital anomalies?</h2>
+            <div class="image-container"><img src="A 21.jpg" alt="Question Image 21"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Hypospadias</h3>
+            </div>
+        </div>
+
+        <!-- Card 29 -->
+        <div class="card">
+            <h2 class="card-header">Q29: Identify the congenital anomalies?</h2>
+            <div class="image-container"><img src="A 22.jpg" alt="Question Image 22"></div>
+            <hr>
+            <h3 class="section-title">Answer</h3>
+            <div class="answer-content">
+                <h3>Epispadias</h3>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+
