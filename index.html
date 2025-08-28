@@ -115,13 +115,17 @@
             margin: 25px 0;
         }
 
-        /* Print-specific styles */
+/* Print-specific styles */
         @media print {
             body {
                 background-color: #fff;
                 padding: 0;
                 margin: 0;
-                font-size: 12pt; /* Standard print size */
+                font-size: 12pt;
+            }
+            
+            .print-container {
+                display: none; /* Hide print button on print */
             }
 
             .page-container {
@@ -135,12 +139,12 @@
 
             .card {
                 border: 1px solid #999;
-                page-break-inside: avoid; /* Prevents a card from splitting across two pages */
+                page-break-inside: avoid;
                 box-shadow: none;
             }
 
             img {
-                max-width: 80%; /* Reduce image size slightly for printing */
+                max-width: 80%;
             }
             
             .main-title {
@@ -156,7 +160,14 @@
 <body>
 
     <div class="page-container">
-        <h1 class="main-title">ملخص عملي التشريح (Anatomy Practical)</h1>
+        <h1 class="main-title">Anatomy Practical Summary</h1>
+        
+        <div class="print-container">
+            <button onclick="window.print()" class="print-btn">Print Flashcards</button>
+        </div>
+
+    <div class="page-container">
+        <h1 class="main-title"> (Anatomy Practical)</h1>
 
         <!-- Card 1 -->
         <div class="card">
