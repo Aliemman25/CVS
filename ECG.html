@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مذكرة طباعة - Dr. Abdelrahman</title>
+    <style>
+        /* --- استيراد الخطوط الجديدة من Google Fonts --- */
+        @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Roboto:wght@400;500&display=swap');
+
+        /* --- إعدادات الصفحة العامة --- */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* لون للعرض على الشاشة فقط */
+            font-family: 'Roboto', sans-serif;
+        }
+
+        /* --- حاوية صفحة A4 --- */
+        .page {
+            width: 210mm;
+            height: 297mm;
+            margin: 0.1cm auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            padding: 2mm; /* هوامش داخلية صغيرة جدًا */
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            
+            page-break-after: always;
+        }
+        
+        .page:last-child {
+            page-break-after: auto;
+        }
+
+        /* --- قسم رأس الصفحة (Header) --- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1.5px solid #d32f2f;
+            padding-bottom: 3px;
+        }
+        
+        .logo {
+            height: 45px; /* --- يمكنك تعديل حجم اللوجو هنا --- */
+            width: auto;
+        }
+
+        .doctor-name {
+            /* --- تم تغيير الخط وإضافة ظل للنص هنا --- */
+            font-family: 'Alex Brush', cursive; /* خط جديد وأكثر زخرفة */
+            font-size: 34pt; /* --- يمكنك تعديل حجم الخط هنا --- */
+            color: #2c3e50; /* لون رمادي داكن أنيق */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* ظل خفيف للاحترافية */
+        }
+
+        /* --- منطقة المحتوى الفارغة --- */
+        .content {
+            flex-grow: 1;
+        }
+
+        /* --- قسم تذييل الصفحة --- */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding-top: 8px;
+        }
+
+        .page-number {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            background-color: #e53935;
+            color: white;
+            border-radius: 50%;
+            border: 2px solid #b71c1c;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+            font-size: 12pt;
+        }
+
+        /* --- زر الطباعة --- */
+        .print-button-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        #print-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #d32f2f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        
+        #print-button:hover {
+            background-color: #b71c1c;
+        }
+
+        /* --- تنسيقات خاصة بالطباعة --- */
+        @media print {
+            body {
+                background-color: white;
+            }
+        
+            .page {
+                margin: 0;
+                padding: 2mm;
+                box-shadow: none;
+                width: 100%;
+                height: 100%;
+            }
+
+            .print-button-container {
+                display: none;
+            }
+            
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="print-button-container">
+        <button id="print-button">طباعة المذكرة</button>
+    </div>
+
+    <div id="pages-container">
+        <!-- سيتم إنشاء الصفحات هنا بواسطة JavaScript -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const pagesContainer = document.getElementById('pages-container');
+            const totalPages = 100; // --- يمكنك تغيير عدد الصفحات هنا ---
+
+            let pagesHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                pagesHTML += `
+                    <div class="page">
+                        <header class="header">
+                            <div class="Logo-container">
+                                <!-- تأكد من وجود ملف "logo.jpg" في نفس المجلد -->
+                                <img src="logo.jpg" alt="Logo" class="logo">
+                            </div>
+                            <div class="doctor-name">
+                                <!-- يمكنك تغيير الاسم هنا -->
+                                Dr. Abdelrahman
+                            </div>
+                        </header>
+                        <main class="content">
+                            <!-- منطقة فارغة للملاحظات -->
+                        </main>
+                        <footer class="footer">
+                            <div class="page-number">
+                                <span>${i}</span>
+                            </div>
+                        </footer>
+                    </div>
+                `;
+            }
+            pagesContainer.innerHTML = pagesHTML;
+
+            document.getElementById('print-button').addEventListener('click', () => {
+                window.print();
+            });
+        });
+    </script>
+
+</body>
+</html>
